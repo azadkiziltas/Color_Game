@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreenActivity">
+
+    <RelativeLayout
+        android:id="@+id/MainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/HeadLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="10dp"
+                android:text="Color Game"
+                android:textColor="#000000"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/BodyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ColorLayout"
+            android:layout_below="@id/HeadLayout">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+
+                <ImageView
+                    android:id="@+id/mainImage"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/rgb" />
+
+                <Button
+                    android:id="@+id/rgbButton"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mainImage"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/button_background"
+                    android:text="RGB GAME"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:backgroundTint="#000000"></Button>
+
+                <Button
+                    android:id="@+id/hexButton"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rgbButton"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_background"
+                    android:text="HEX GAME"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:backgroundTint="#000000"></Button>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ColorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="true">
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
